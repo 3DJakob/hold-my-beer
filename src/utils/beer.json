@@ -1,0 +1,86 @@
+{
+    "productId": "24615821",
+    "productNumber": "1104001",
+    "productNameBold": "Williams Brothers",
+    "productNameThin": "Pavlov's Dog",
+    "category": null,
+    "productNumberShort": "11040",
+    "producerName": "Williams Brothers",
+    "supplierName": "Brill & Co AB",
+    "isKosher": false,
+    "bottleTextShort": "Flaska",
+    "restrictedParcelQuantity": 0,
+    "isOrganic": false,
+    "isEthical": false,
+    "ethicalLabel": null,
+    "isWebLaunch": false,
+    "productLaunchDate": "2021-09-07T00:00:00",
+    "isCompletelyOutOfStock": false,
+    "isTemporaryOutOfStock": false,
+    "alcoholPercentage": 4.3,
+    "volumeText": "500 ml",
+    "volume": 500,
+    "price": 28.9,
+    "country": "Storbritannien",
+    "originLevel1": null,
+    "originLevel2": null,
+    "categoryLevel1": "Öl",
+    "categoryLevel2": "Ale",
+    "categoryLevel3": "Engelsk pale ale och bitter",
+    "categoryLevel4": null,
+    "customCategoryTitle": "Öl, Ale, Engelsk pale ale och bitter ",
+    "assortmentText": "Tillfälligt sortiment",
+    "usage": "Serveras vid 8-10°C som sällskapsdryck eller till rätter av fläsk- eller lammkött.",
+    "taste": "Maltig smak med tydlig beska, inslag av mörkt bröd, farinsocker, torkade aprikoser, choklad och apelsinskal.",
+    "tasteSymbols": [
+        "Fläsk",
+        "Grönsaker",
+        "Lamm"
+    ],
+    "tasteClockGroupBitter": null,
+    "tasteClockGroupSmokiness": null,
+    "tasteClockBitter": 7,
+    "tasteClockFruitacid": 0,
+    "tasteClockBody": 5,
+    "tasteClockRoughness": 0,
+    "tasteClockSweetness": 2,
+    "tasteClockSmokiness": 0,
+    "tasteClockCasque": 1,
+    "assortment": "TSV",
+    "recycleFee": 0,
+    "isManufacturingCountry": true,
+    "isRegionalRestricted": false,
+    "packaging": "Flaska",
+    "isNews": false,
+    "images": [
+        {
+            "imageUrl": "https://product-cdn.systembolaget.se/productimages/24615821/24615821",
+            "fileType": null,
+            "size": null
+        }
+    ],
+    "isDiscontinued": false,
+    "isSupplierTemporaryNotAvailable": false,
+    "sugarContent": 0,
+    "sugarContentGramPer100ml": 0,
+    "seal": [],
+    "vintage": null,
+    "grapes": [],
+    "otherSelections": null,
+    "tasteClocks": [
+        {
+            "key": "TasteClockBitter",
+            "value": 7
+        },
+        {
+            "key": "TasteClockBody",
+            "value": 5
+        },
+        {
+            "key": "TasteClockSweetness",
+            "value": 2
+        }
+    ],
+    "color": "Rödbrun färg.",
+    "dishPoints": null
+}
