@@ -72,3 +72,8 @@ export interface BeerStruct {
   color: string
   dishPoints?: any
 }
+
+export interface BeerSimilarityStruct {
+  beer: BeerStruct
+  similarity: number
+}

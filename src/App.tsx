@@ -2,7 +2,7 @@ import * as d3 from 'd3'
 import { useEffect, useState } from 'react'
 // @ts-expect-error
 import data from './utils/beers.csv'
-import { BeerStruct } from './utils/typings'
+import { BeerSimilarityStruct, BeerStruct } from './utils/typings'
 // @ts-expect-error
 import { Corpus } from 'tiny-tfidf'
 import stopwords from 'stopwords-sv'
@@ -96,7 +96,7 @@ const removeDuplicates = (beers: BeerStruct[]): BeerStruct[] => {
 const App: React.FC = () => {
   const [corpus, setCorpus] = useState<any>()
   const [loading, setLoading] = useState(true)
-  const [results, setResults] = useState<BeerStruct[]>([])
+  const [results, setResults] = useState<BeerSimilarityStruct[]>([])
   const [subTitle, setSubtitle] = useState('')
 
   const createCorpus = async (): Promise<void> => {
@@ -120,19 +120,19 @@ const App: React.FC = () => {
 
   const handleInput = (text: string): void => {
     if (corpus != null) {
-      const result: Array<Array<string|number>> = corpus.getResultsForQuery(text).slice(0, 10)
-      // console.log('done similarity')
-      // console.log(result.map(item => corpus.getDocument(item[0])))
-      // console.log(result.map(item => allBeers[Number(item[0])]))
-      setResults(result.map(item => allBeers[Number(item[0])]))
+      const result: Array<Array<string|number>> = corpus.getResultsForQuery(text).slice(0, 50)
+      setResults(result.map(item => {
+        return {
+          beer: allBeers[Number(item[0])],
+          similarity: Number(item[1])
+        }
+      }))
     }
   }
 
   const findSimilar = (beer: BeerStruct): void => {
-    console.log(beer)
-    setSubtitle('Eftersom du gillar ' + beer.productNameBold + ' ' + beer.productNameThin)
+    setSubtitle('Eftersom du gillar ' + beer.productNameBold + ' av ' + beer.productNameThin)
     handleInput(beerToString(beer))
-    console.log(beerToString(beer))
   }
 
   if (loading) {
@@ -154,7 +154,7 @@ const App: React.FC = () => {
       <SearchBox onChange={(e: any) => handleInput(e.target.value)} placeholder='Search for a beer!' />
       <SubTitle>{subTitle}</SubTitle>
       <ResultContainer>
-        {results.map(beer => <Beer beer={beer} key={beerToString(beer)} onClick={findSimilar} />)}
+        {results.map(beerData => <Beer beerData={beerData} key={beerToString(beerData.beer)} onClick={findSimilar} />)}
       </ResultContainer>
     </Container>
   )
