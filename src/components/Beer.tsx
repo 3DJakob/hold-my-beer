@@ -12,7 +12,7 @@ export interface BeerProps {
 }
 
 const Container = styled.div`
-  margin: 50px;
+  margin: 30px;
 `
 
 const Row = styled.div`
@@ -126,7 +126,7 @@ const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
                     {beer.alcoholPercentage}%
                   </ThinTitle>
 
-                  <Buy href={url} target='_blank'>Köp nu</Buy>
+                  <Buy href={url} onClick={(e: any) => e.stopPropagation()} target='_blank'>Köp nu</Buy>
 
                   <Tags>
                     {beer.categoryLevel2 !== '' && <Tag title={beer.categoryLevel2} />}
