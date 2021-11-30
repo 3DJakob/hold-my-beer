@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ed4a276.chunk.css",
-    "main.js": "/static/js/main.9552620c.chunk.js",
-    "main.js.map": "/static/js/main.9552620c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8a39c588.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8a39c588.js.map",
-    "static/js/2.04622e02.chunk.js": "/static/js/2.04622e02.chunk.js",
-    "static/js/2.04622e02.chunk.js.map": "/static/js/2.04622e02.chunk.js.map",
-    "static/js/3.cc60494b.chunk.js": "/static/js/3.cc60494b.chunk.js",
-    "static/js/3.cc60494b.chunk.js.map": "/static/js/3.cc60494b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.6ed4a276.chunk.css.map": "/static/css/main.6ed4a276.chunk.css.map",
-    "static/js/2.04622e02.chunk.js.LICENSE.txt": "/static/js/2.04622e02.chunk.js.LICENSE.txt",
-    "static/media/banner.331b6a36.svg": "/static/media/banner.331b6a36.svg",
-    "static/media/beers.b9441815.csv": "/static/media/beers.b9441815.csv",
-    "static/media/times-solid.ea7c95d7.svg": "/static/media/times-solid.ea7c95d7.svg"
+    "main.css": "/beer-recommender/static/css/main.6ed4a276.chunk.css",
+    "main.js": "/beer-recommender/static/js/main.9552620c.chunk.js",
+    "main.js.map": "/beer-recommender/static/js/main.9552620c.chunk.js.map",
+    "runtime-main.js": "/beer-recommender/static/js/runtime-main.48820a46.js",
+    "runtime-main.js.map": "/beer-recommender/static/js/runtime-main.48820a46.js.map",
+    "static/js/2.07b6ee2e.chunk.js": "/beer-recommender/static/js/2.07b6ee2e.chunk.js",
+    "static/js/2.07b6ee2e.chunk.js.map": "/beer-recommender/static/js/2.07b6ee2e.chunk.js.map",
+    "static/js/3.cc60494b.chunk.js": "/beer-recommender/static/js/3.cc60494b.chunk.js",
+    "static/js/3.cc60494b.chunk.js.map": "/beer-recommender/static/js/3.cc60494b.chunk.js.map",
+    "index.html": "/beer-recommender/index.html",
+    "static/css/main.6ed4a276.chunk.css.map": "/beer-recommender/static/css/main.6ed4a276.chunk.css.map",
+    "static/js/2.07b6ee2e.chunk.js.LICENSE.txt": "/beer-recommender/static/js/2.07b6ee2e.chunk.js.LICENSE.txt",
+    "static/media/banner.331b6a36.svg": "/beer-recommender/static/media/banner.331b6a36.svg",
+    "static/media/beers.b9441815.csv": "/beer-recommender/static/media/beers.b9441815.csv",
+    "static/media/times-solid.ea7c95d7.svg": "/beer-recommender/static/media/times-solid.ea7c95d7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a39c588.js",
-    "static/js/2.04622e02.chunk.js",
+    "static/js/runtime-main.48820a46.js",
+    "static/js/2.07b6ee2e.chunk.js",
     "static/css/main.6ed4a276.chunk.css",
     "static/js/main.9552620c.chunk.js"
   ]

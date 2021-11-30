@@ -1,7 +1,6 @@
 {
   "short_name": "Beer Recommender",
   "name": "Beer Recommender",
-  "homepage": "http://3djakob.github.io/beer-recommender",
   "icons": [
     {
       "src": "favicon.ico",
