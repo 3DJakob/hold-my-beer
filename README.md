@@ -1,7 +1,7 @@
 # Hold my beer
 
 ## Your digital beer connoisseur!
-Hold my beer is a webb app designed to recommend similar beers to the ones you love.
+Hold my beer is a web app designed to recommend similar beers to the ones you love.
 
 Try it here [https://3djakob.github.io/hold-my-beer/](https://3djakob.github.io/hold-my-beer/)
 
