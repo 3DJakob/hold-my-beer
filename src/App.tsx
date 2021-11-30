@@ -10,6 +10,7 @@ import SquareLoader from 'react-spinners/SquareLoader'
 import Beer from './components/Beer'
 // @ts-expect-error
 import styled from 'styled-components'
+import HowToUse from './components/HowToUse'
 let allBeers: BeerStruct[] = []
 
 const beerToString = (beer: BeerStruct): string => {
@@ -118,7 +119,7 @@ const App: React.FC = () => {
     createCorpus().catch(() => console.log('error loading corpus!'))
   }, [])
 
-  const handleInput = (text: string): void => {
+  const search = (text: string): void => {
     if (corpus != null) {
       const result: Array<Array<string|number>> = corpus.getResultsForQuery(text).slice(0, 50)
       setResults(result.map(item => {
@@ -130,9 +131,14 @@ const App: React.FC = () => {
     }
   }
 
+  const handleInput = (text: string): void => {
+    setSubtitle('')
+    search(text)
+  }
+
   const findSimilar = (beer: BeerStruct): void => {
     setSubtitle('Eftersom du gillar ' + beer.productNameBold + ' av ' + beer.productNameThin)
-    handleInput(beerToString(beer))
+    search(beerToString(beer))
   }
 
   if (loading) {
@@ -150,12 +156,15 @@ const App: React.FC = () => {
     <Container>
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap' rel='stylesheet' />
-      <Title>TF-IDF beer searcher</Title>
-      <SearchBox onChange={(e: any) => handleInput(e.target.value)} placeholder='Search for a beer!' />
+      <Title>Beer finder</Title>
+      <SearchBox onChange={(e: any) => handleInput(e.target.value)} placeholder='Sök efter en öl' />
       <SubTitle>{subTitle}</SubTitle>
       <ResultContainer>
         {results.map(beerData => <Beer beerData={beerData} key={beerToString(beerData.beer)} onClick={findSimilar} />)}
       </ResultContainer>
+      {results.length === 0 && (
+        <HowToUse />
+      )}
     </Container>
   )
 }
