@@ -98,49 +98,47 @@ const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
       {/* <p>{beerData.similarity}</p> */}
       <div onClick={() => onClick(beer)}>
         <Card>
-          <>
-            {isGreatMatch && <Banner style={{ position: 'absolute', right: 0, top: 0 }} />}
-            <Column style={{
-              backgroundColor: 'rgb(55, 55, 55)',
-              cursor: 'pointer',
-              padding: 20,
-              height: 300,
-              width: 480
-            }}
-            >
-              <Row>
-                <Center>
-                  <object data={imageURL} style={{ height: 200 }} type='image/png'>
-                    <img style={{ height: 200 }} src={placeHolderImage} alt='Beer' />
-                  </object>
-                </Center>
-                <Content>
+          {isGreatMatch && <Banner style={{ position: 'absolute', right: 0, top: 0, borderTopRightRadius: 20 }} />}
+          <Column style={{
+            backgroundColor: 'rgb(55, 55, 55)',
+            cursor: 'pointer',
+            padding: 20,
+            height: 300,
+            width: 480
+          }}
+          >
+            <Row>
+              <Center>
+                <object data={imageURL} style={{ height: 200 }} type='image/png'>
+                  <img style={{ height: 200 }} src={placeHolderImage} alt='Beer' />
+                </object>
+              </Center>
+              <Content>
 
-                  <Title>
-                    {beer.productNameBold}
-                  </Title>
-                  <Subtitle>
-                    {beer.productNameThin}
-                  </Subtitle>
-                  <ThinTitle>
-                    {beer.alcoholPercentage}%
-                  </ThinTitle>
+                <Title>
+                  {beer.productNameBold}
+                </Title>
+                <Subtitle>
+                  {beer.productNameThin}
+                </Subtitle>
+                <ThinTitle>
+                  {beer.alcoholPercentage}%
+                </ThinTitle>
 
-                  <Buy href={url} onClick={(e: any) => e.stopPropagation()} target='_blank'>Köp nu</Buy>
+                <Buy href={url} onClick={(e: any) => e.stopPropagation()} target='_blank'>Köp nu</Buy>
 
-                  <Tags>
-                    {beer.categoryLevel2 !== '' && <Tag title={beer.categoryLevel2} />}
-                    {beer.categoryLevel3 !== '' && <Tag title={beer.categoryLevel3} />}
-                    {beer.categoryLevel4 !== '' && <Tag title={beer.categoryLevel4} />}
-                  </Tags>
+                <Tags>
+                  {beer.categoryLevel2 !== '' && <Tag title={beer.categoryLevel2} />}
+                  {beer.categoryLevel3 !== '' && <Tag title={beer.categoryLevel3} />}
+                  {beer.categoryLevel4 !== '' && <Tag title={beer.categoryLevel4} />}
+                </Tags>
 
-                </Content>
-              </Row>
-              <Description>
-                {beer.taste}
-              </Description>
-            </Column>
-          </>
+              </Content>
+            </Row>
+            <Description>
+              {beer.taste}
+            </Description>
+          </Column>
         </Card>
 
       </div>
