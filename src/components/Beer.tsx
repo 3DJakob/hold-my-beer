@@ -2,14 +2,8 @@ import React from 'react'
 // @ts-expect-error
 import styled from 'styled-components'
 import { BeerSimilarityStruct, BeerStruct } from '../utils/typings'
-
-// //@ts-expect-error
-// import Card from 'react-animated-3d-card'
 import Tag from './Tag'
-// import Banner from '../../public'
 import { ReactComponent as Banner } from './banner.svg'
-// @ts-expect-error
-import ParallaxCard from 'react-parallax-card'
 import Card from './Card'
 
 export interface BeerProps {
@@ -75,12 +69,29 @@ const Description = styled.div`
   width: 100%;
 `
 
+const Buy = styled.a`
+  border-radius: 50px;
+  background-color: #10B65C;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-self: flex-start;
+  transition: 200ms;
+  margin-bottom: 10px;
+
+  :hover {
+    background-color: #27CA6B;
+  }
+`
+
 const placeHolderImage = 'https://cdn.systembolaget.se/492c4d/contentassets/ef797556881d4e20b334529d96b975a2/placeholder-wine-bottle.png'
 
 const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
   const beer = beerData.beer
-  const url = 'https://product-cdn.systembolaget.se/productimages/' + beer.productId + '/' + beer.productId + '_400.png'
-  const isGreatMatch = beerData.similarity > 20
+  const imageURL = 'https://product-cdn.systembolaget.se/productimages/' + beer.productId + '/' + beer.productId + '_400.png'
+  const isGreatMatch = beerData.similarity > 23
+  const url = 'https://www.systembolaget.se/produkt/ol/' + beer.producerName.replace(' ', '-') + '-' + beer.productNumber
 
   return (
     <Container>
@@ -88,7 +99,7 @@ const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
       <div onClick={() => onClick(beer)}>
         <Card>
           <>
-            {isGreatMatch && <img src='/banner.svg' style={{ position: 'absolute', right: 0, top: 0 }} />}
+            {isGreatMatch && <Banner style={{ position: 'absolute', right: 0, top: 0 }} />}
             <Column style={{
               backgroundColor: 'rgb(55, 55, 55)',
               cursor: 'pointer',
@@ -99,7 +110,7 @@ const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
             >
               <Row>
                 <Center>
-                  <object data={url} style={{ height: 200 }} type='image/png'>
+                  <object data={imageURL} style={{ height: 200 }} type='image/png'>
                     <img style={{ height: 200 }} src={placeHolderImage} alt='Beer' />
                   </object>
                 </Center>
@@ -114,6 +125,8 @@ const Beer: React.FC<BeerProps> = ({ beerData, onClick }) => {
                   <ThinTitle>
                     {beer.alcoholPercentage}%
                   </ThinTitle>
+
+                  <Buy href={url} target='_blank'>Köp nu</Buy>
 
                   <Tags>
                     {beer.categoryLevel2 !== '' && <Tag title={beer.categoryLevel2} />}
