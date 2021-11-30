@@ -12,10 +12,12 @@
     "@types/react-dom": "^17.0.0",
     "d3": "^7.1.1",
     "react": "^17.0.2",
+    "react-animated-3d-card": "^1.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-spinners": "^0.11.0",
     "stopwords-sv": "^0.2.0",
+    "styled-components": "^5.3.3",
     "tiny-tfidf": "^0.9.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
