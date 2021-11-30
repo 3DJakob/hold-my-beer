@@ -11,6 +11,7 @@ import Beer from './components/Beer'
 // @ts-expect-error
 import styled from 'styled-components'
 import HowToUse from './components/HowToUse'
+import Input from './components/Input'
 let allBeers: BeerStruct[] = []
 
 const beerToString = (beer: BeerStruct): string => {
@@ -62,24 +63,6 @@ const Opacity = styled.div`
   opacity: 0.4;
 `
 
-const SearchBox = styled.input`
-  display: flex;
-  padding: 20px;
-  margin: 20px;
-  font-size: 16px;
-  max-width: 400px;
-  width: -webkit-fill-available;
-  background-color: #fff;
-  border-radius: 10px;
-  -webkit-appearance: none;
-  border:none;
-  background-image:none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  box-sizing: border-box;
-`
-
 const ResultContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -111,7 +94,7 @@ const App: React.FC = () => {
       stopwords
     )
     setCorpus(corpus)
-    corpus.getResultsForQuery('ale')
+    corpus.getResultsForQuery('ale') // initiate learner
     setLoading(false)
   }
 
@@ -157,7 +140,7 @@ const App: React.FC = () => {
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap' rel='stylesheet' />
       <Title>Beer finder</Title>
-      <SearchBox onChange={(e: any) => handleInput(e.target.value)} placeholder='Sök efter en öl' />
+      <Input onChange={handleInput} placeholder='Sök efter en öl' />
       <SubTitle>{subTitle}</SubTitle>
       <ResultContainer>
         {results.map(beerData => <Beer beerData={beerData} key={beerToString(beerData.beer)} onClick={findSimilar} />)}
