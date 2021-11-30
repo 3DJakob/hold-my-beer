@@ -55,6 +55,11 @@ const Title = styled.h1`
   color: #fff;
 `
 
+const Tagline = styled.p`
+  color: #fff;
+  margin-top: 0;
+`
+
 const SubTitle = styled.h2`
   color: #fff;
 `
@@ -148,7 +153,8 @@ const App: React.FC = () => {
       <meta name='theme-color' content='#ff0000' />
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap' rel='stylesheet' />
-      <Title>Beer finder</Title>
+      <Title>Hold my beer</Title>
+      <Tagline>Din digitala ölkännare</Tagline>
       <Input onChange={handleInput} placeholder='Sök efter en öl' />
       <SubTitle>{subTitle}</SubTitle>
       <ResultContainer>

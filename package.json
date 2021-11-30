@@ -1,6 +1,6 @@
 {
-  "name": "beer-recommender",
-  "homepage": "/beer-recommender/",
+  "name": "hold-my-beer",
+  "homepage": "/hold-my-beer/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

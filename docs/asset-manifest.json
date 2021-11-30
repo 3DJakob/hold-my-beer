@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/beer-recommender/static/css/main.6ed4a276.chunk.css",
-    "main.js": "/beer-recommender/static/js/main.9552620c.chunk.js",
-    "main.js.map": "/beer-recommender/static/js/main.9552620c.chunk.js.map",
-    "runtime-main.js": "/beer-recommender/static/js/runtime-main.48820a46.js",
-    "runtime-main.js.map": "/beer-recommender/static/js/runtime-main.48820a46.js.map",
-    "static/js/2.07b6ee2e.chunk.js": "/beer-recommender/static/js/2.07b6ee2e.chunk.js",
-    "static/js/2.07b6ee2e.chunk.js.map": "/beer-recommender/static/js/2.07b6ee2e.chunk.js.map",
-    "static/js/3.cc60494b.chunk.js": "/beer-recommender/static/js/3.cc60494b.chunk.js",
-    "static/js/3.cc60494b.chunk.js.map": "/beer-recommender/static/js/3.cc60494b.chunk.js.map",
-    "index.html": "/beer-recommender/index.html",
-    "static/css/main.6ed4a276.chunk.css.map": "/beer-recommender/static/css/main.6ed4a276.chunk.css.map",
-    "static/js/2.07b6ee2e.chunk.js.LICENSE.txt": "/beer-recommender/static/js/2.07b6ee2e.chunk.js.LICENSE.txt",
-    "static/media/banner.331b6a36.svg": "/beer-recommender/static/media/banner.331b6a36.svg",
-    "static/media/beers.b9441815.csv": "/beer-recommender/static/media/beers.b9441815.csv",
-    "static/media/times-solid.ea7c95d7.svg": "/beer-recommender/static/media/times-solid.ea7c95d7.svg"
+    "main.css": "/hold-my-beer/static/css/main.6ed4a276.chunk.css",
+    "main.js": "/hold-my-beer/static/js/main.9b3bcfcc.chunk.js",
+    "main.js.map": "/hold-my-beer/static/js/main.9b3bcfcc.chunk.js.map",
+    "runtime-main.js": "/hold-my-beer/static/js/runtime-main.c6f12542.js",
+    "runtime-main.js.map": "/hold-my-beer/static/js/runtime-main.c6f12542.js.map",
+    "static/js/2.d54917ed.chunk.js": "/hold-my-beer/static/js/2.d54917ed.chunk.js",
+    "static/js/2.d54917ed.chunk.js.map": "/hold-my-beer/static/js/2.d54917ed.chunk.js.map",
+    "static/js/3.0bca595b.chunk.js": "/hold-my-beer/static/js/3.0bca595b.chunk.js",
+    "static/js/3.0bca595b.chunk.js.map": "/hold-my-beer/static/js/3.0bca595b.chunk.js.map",
+    "index.html": "/hold-my-beer/index.html",
+    "static/css/main.6ed4a276.chunk.css.map": "/hold-my-beer/static/css/main.6ed4a276.chunk.css.map",
+    "static/js/2.d54917ed.chunk.js.LICENSE.txt": "/hold-my-beer/static/js/2.d54917ed.chunk.js.LICENSE.txt",
+    "static/media/banner.331b6a36.svg": "/hold-my-beer/static/media/banner.331b6a36.svg",
+    "static/media/beers.b9441815.csv": "/hold-my-beer/static/media/beers.b9441815.csv",
+    "static/media/times-solid.ea7c95d7.svg": "/hold-my-beer/static/media/times-solid.ea7c95d7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.48820a46.js",
-    "static/js/2.07b6ee2e.chunk.js",
+    "static/js/runtime-main.c6f12542.js",
+    "static/js/2.d54917ed.chunk.js",
     "static/css/main.6ed4a276.chunk.css",
-    "static/js/main.9552620c.chunk.js"
+    "static/js/main.9b3bcfcc.chunk.js"
   ]
 }
