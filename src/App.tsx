@@ -135,7 +135,7 @@ const App: React.FC = () => {
         <Opacity>
           <SquareLoader color='white' loading size={30} />
         </Opacity>
-        <Text>Constructing corpus</Text>
+        <Text>Initierar sökmotorn</Text>
       </Container>
     )
   }
