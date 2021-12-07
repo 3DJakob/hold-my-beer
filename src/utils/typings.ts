@@ -10,6 +10,7 @@ export interface TasteClockStruct {
 }
 
 export interface BeerStruct {
+  id?: string
   productId: string
   productNumber: string
   productNameBold: string

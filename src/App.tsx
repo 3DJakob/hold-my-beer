@@ -12,6 +12,8 @@ import Beer from './components/Beer'
 import styled from 'styled-components'
 import HowToUse from './components/HowToUse'
 import Input from './components/Input'
+// @ts-expect-error
+import { v4 as uuidv4 } from 'uuid'
 let allBeers: BeerStruct[] = []
 
 const beerToString = (beer: BeerStruct): string => {
@@ -34,6 +36,9 @@ const loadBeers = async (): Promise<string[]> => {
     allBeers.push(data)
   })
   allBeers = removeDuplicates(allBeers)
+  allBeers = allBeers.map(beer => {
+    return { ...beer, id: uuidv4() }
+  })
   return allBeers.map(beer => beerToString(beer))
 }
 // background: rgb(217,142,81);
@@ -158,7 +163,7 @@ const App: React.FC = () => {
       <Input onChange={handleInput} placeholder='Sök efter en öl' />
       <SubTitle>{subTitle}</SubTitle>
       <ResultContainer>
-        {results.map(beerData => <Beer beerData={beerData} key={beerToString(beerData.beer)} onClick={findSimilar} />)}
+        {results.map(beerData => <Beer beerData={beerData} key={beerData.beer.id} onClick={findSimilar} />)}
       </ResultContainer>
       {results.length === 0 && (
         <HowToUse />
